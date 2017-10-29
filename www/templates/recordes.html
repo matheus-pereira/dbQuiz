@@ -1,0 +1,15 @@
+<ion-view view-title="Recordes">
+  <ion-content class="padding">
+    <h2>Melhores pontuações</h2>
+
+    <ion-list>
+      <ion-item ng-repeat="posicao in posicoes">
+        {{posicao.jogador}}
+        <span class="item-note">
+          {{posicao.pontuacao}}
+        </span>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

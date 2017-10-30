@@ -26,7 +26,7 @@ angular.module('app.controllers', [])
     $scope.modal = modal;
   });
 
-  sortearPerguntas = function() {
+  var sortearPerguntas = function() {
     var numeros = [];
     numeros.push(Math.floor(Math.random() * 30) + 1);
     while (numeros.length < 10) {
@@ -53,12 +53,11 @@ angular.module('app.controllers', [])
   }
 
   $scope.finalizarQuiz = function() {
-    perguntas = $scope.perguntas;
-    pontuacao = 0;
-    for (i = 0; i < perguntas.length; i++) {
-      if (perguntas[i].resposta === perguntas[i].respostaCerta) {
+    for (i = 0; i < $scope.perguntas.length; i++) {
+      if ($scope.perguntas[i].resposta === $scope.perguntas[i].respostaCerta) {
         $scope.pontuacao++;
       }
+      delete $scope.perguntas[i].resposta;
     }
     $scope.quizIniciado = false;
     $scope.perguntas = [];

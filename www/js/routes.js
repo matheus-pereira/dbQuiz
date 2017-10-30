@@ -6,7 +6,8 @@ angular.module('app.routes', [])
     .state('tab', {
         url: '/tab',
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'templates/tabs.html',
+        cache: false
     })
 
     .state('tab.recordes', {

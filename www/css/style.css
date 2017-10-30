@@ -1,1 +1,4 @@
-/* Empty. Add your own CSS if you like */
+.list-quiz .item, .list-quiz .item-content {
+    white-space: normal !important;
+    text-align: justify;
+}
